@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <title>jQuery Element Creation</title>
+</head>
+<body>
+    <h1>Create elements using jQuery</h1>
+    <p>Using jQuery, create a div with the class "box" and append it to the the container.
+
+<style>
+
+    .box {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: purple;
+    }
+
+</style>
+
+<div id="container"></div>
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    //Create a variable $div and append it to a variable $container.
+
+    var $container = $('#container'); //# is a CSS selector
+    var $div       = $('<div class="box"></div>');
+
+    $div.appendTo($container);
+
+</script>
+
+</body>
+</html>

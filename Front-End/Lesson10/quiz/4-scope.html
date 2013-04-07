@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Variable Scope</title>
+</head>
+<body>
+    <h1>Fix the code</h1>
+    <p></p>
+        
+<script>
+
+var consoleText = "Bye %s !!" ;
+
+function sayHello(name) {
+    var consoleText = "Hello %s!";
+    console.log(consoleText, name);
+}
+
+function sayBye(name) {
+    console.log(consoleText, name);
+}
+
+sayHello('Alf');
+sayBye('Alf');
+
+</script>
+
+</body>
+</html>

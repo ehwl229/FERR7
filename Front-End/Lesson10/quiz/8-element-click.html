@@ -1,0 +1,41 @@
+
+<html>
+<head>
+    <title>jQuery Click</title>
+</head>
+<body>
+    <h1>Create an event handler for an element.</h1>
+    <p>Using jQuery, make it so when you click on the red box, it disappears.</p>
+
+<style>
+
+    .box {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: purple;
+    }
+
+</style>
+
+<div id="container">
+    <div class="box"></div>
+</div>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+    //Create a variable for $div, bind the "click" event to make it disappear.
+    $div = $('.box');
+
+    $div.on('click', function() {
+        $this = $(this);
+        $this.fadeOut();
+
+    });
+
+
+</script>
+
+</body>
+</html>

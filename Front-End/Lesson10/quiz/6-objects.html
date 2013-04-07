@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Set and get object properties</h1>
+    <p>Create an array of odd numbers</p>
+        
+<script>
+
+var people = {
+	'Quizno' : { 'loves': 'sandwiches', 'hates': 'Subway' },
+   
+
+}
+
+people.Pizzahut = {'loves': 'pizzas', 'hates': 'Dominos'};
+
+for (var i in people)  {
+		//console.log(" %s loves %o and hates %o", i, people);
+		console.log(i + " loves " + people[i].loves + " hates " + people[i].hates);
+	}
+
+
+
+
+// Add a new person to this people array.
+
+
+// Output what each person loves and hates.
+// Hint: for (i in people)  { }
+
+</script>
+
+</body>
+</html>
