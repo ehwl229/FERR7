@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+		<title>Block Examples</title>
+	</head>
+
+	<style>
+		div.square {
+			height: 40px;
+			width: 40px;
+			background-color: #eee;
+			color: #999;
+			text-align: center;
+			border: 1px solid #999;
+		} 
+		div.normal {
+			background-color: #eec;
+			color: #999;
+			text-align: center;
+			border: 1px solid #999;
+		} 
+		.controls {
+			position: fixed;
+			background-color: rgba(255,255,255,.9);
+			bottom: top;
+			right: 0;
+			height: 50px;
+			left: 0;
+			border-bottom: 1px solid black;
+		}
+		.controls ul li {
+			display: inline-block;
+		}
+		h2 {
+			clear:both;
+		}
+		h1 {
+			padding-top: 70px;
+		}
+	</style>
+	<body>
+		<div class="controls">
+			<ul>
+				<li><input type="radio" name="display" value="">Default</li>
+				<li><input type="radio" name="display" value="block">Block</li>
+				<li><input type="radio" name="display" value="inline">Inline</li>
+				<li><input type="radio" name="display" value="inline-block">Inline-Block</li>
+				<li><input type="radio" name="display" value="Box">box</li>
+				<li><input type="radio" name="display" value="float-left">Float Left</li>
+			</ul>
+		</div>
+		<h1>Display property simulator</h1>
+		<h2>Images</h2>
+		<div class="tester">
+			<img src="http://i.imgur.com/U4IMy5u.gif" width="100">
+			<img src="http://i.imgur.com/1kAxJYC.gif" width="150">
+		</div>
+
+		<h2>Div Square</h2>
+		<div class="tester">
+			<div class="square">1</div>
+			<div class="square">2</div>
+			<div class="square">3</div>
+			<div class="square">4</div>
+		</div>
+
+		<h2>Div Normal</h2>
+		<div class="divs normal tester">
+			<div class="normal">1</div>
+			<div class="normal">2</div>
+			<div class="normal">3</div>
+			<div class="normal">4</div>
+		</div>
+
+		<h2>Text</h2>
+		<div class="text tester">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		</div>
+		<h2>Mixed up</h2>
+		<div class="divs mixed tester">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <img src="http://i.imgur.com/U4IMy5u.gif" width="100"> labore et dolore magna aliqua. <div class="square">1</div> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.
+				<p>Duis aute irure dolor in <div class="square">2</div>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa <img src="http://i.imgur.com/1kAxJYC.gif" width="150"> qui officia deserunt mollit anim id est <div class="normal">1</div>laborum."
+		</div>
+		
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script>
+		$('input[type="radio"]').click(function(){
+			$this = $(this);
+
+			var display = $this.attr('value');
+
+			if (display == 'float-left') {
+				display = null;
+				$('.tester > *').css('float', 'left');
+			} else {
+				$('.tester > *').css('float', 'null');
+			}
+			console.log(display);
+			$('.tester > *').css('display', display);
+
+
+		});
+	</script>
+	</body>
+</html>
