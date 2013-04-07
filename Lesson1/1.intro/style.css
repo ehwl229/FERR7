@@ -1,0 +1,19 @@
+body {
+	background-color: red;
+}
+h1 {
+	color: blue;
+}
+img {
+	width: 100%;
+	border: 5px solid orange;
+}
+a.google{
+	font-size: 150%;
+}
+i.google{
+	font-size: 200%;
+}
+.big{
+	font-size: 500%;
+}
