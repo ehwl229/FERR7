@@ -1,0 +1,65 @@
+body {
+	background-color: #EEE;
+}
+
+#container > * {
+	margin: 0 auto;
+	width: 80%;
+}
+
+header { 
+	background-color: #999;
+	font-size: 50px;
+	color: #FFF;
+	width: 560px;
+}
+
+footer { 
+	background-color: #AAF;
+	width: 600px;
+	text-align: center;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.one > div > h1 { 
+font-size: 40pt;
+}
+
+.content {
+	background-color: #BAD;
+	width: 600px;
+}
+
+.column {
+	float: left;
+	width: 33.333333333334%;
+}
+
+.column > div {
+	margin: 5px;
+	height: 250px;
+	padding: 5px;
+}
+.column.one > div{
+	background: #FFFFCC;
+	margin-right: 2.5px;
+}
+
+.column.two > div {
+	margin-left: 2.5px;
+	margin-right: 2.5px;
+	background: #FFCCFF;
+}
+
+.column.three > div {
+	margin-left: 2.5px;
+	background: #CCFFFF;
+}
+ 
+.clear {
+	clear: both;
+}
+

@@ -1,0 +1,48 @@
+body {
+	background-color: #EEE;
+}
+
+#container > * {
+	margin: 0 auto;
+}
+
+header { 
+	background-color: #999;
+	font-size: 50px;
+	color: #FFF;
+	padding: 20px;
+	width: 560px;
+}
+
+footer { 
+	background-color: #AAF;
+	width: 600px;
+	padding: 100px 0;
+	text-align: center;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.content {
+	background-color: #BAD;
+	width: 600px;
+}
+
+.column {
+	float: left;
+	margin: 5px;
+	padding: 20px;
+	width: 250px;
+	height: 250px;
+}
+
+.column.one {
+	background: #FFFFCC;
+}
+ 
+.clear {
+	clear: both;
+}
+
