@@ -1,11 +1,5 @@
 class Review < ActiveRecord::Base
-  attr_accessible :book_id, :content, :user_id, :user, :book
-
-
-
-  belongs_to :user
+  attr_accessible :book_id, :review, :user_id
   belongs_to :book
-
-
+  belongs_to :user
 end
-

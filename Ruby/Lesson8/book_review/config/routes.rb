@@ -1,11 +1,10 @@
 BookReview::Application.routes.draw do
-  get "bookreview/index"
 
-  get "/users" => "display#display_users"
+  get "/users" => "users#index"
 
-  get "/reviews" => "display#display_reviews"
+  get "/books" => "books#index"
 
-  get "/books" => "display#display_books"
+  get "/reviews" => "reviews#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +55,7 @@ BookReview::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'bookreview#index'
+  root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

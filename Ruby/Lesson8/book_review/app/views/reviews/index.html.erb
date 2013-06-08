@@ -1,0 +1,11 @@
+<h1>Book Reviews</h1>
+<ul>
+	<li>
+		<% @reviews.each do |review| %>
+		Title: <%= review.book.title %> </br>
+		Author: <%= review.book.author %> </br>
+		Review: <%= review.review %> </br>
+		By: <%= review.user.first_name %> </br>
+		<% end %>
+	</li>
+</ul>

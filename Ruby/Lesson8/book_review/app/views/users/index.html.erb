@@ -1,0 +1,9 @@
+<h1>Users</h1>
+<ul>
+	<li>
+		<% @users.each do |user| %>
+		Name: <%= user.first_name %> <%= "*" if user.is_teen? %></br>
+		Age:  <%= user.age.to_s %></br>
+		<% end %>
+	</li>
+</ul>
